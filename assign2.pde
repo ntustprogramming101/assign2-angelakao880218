@@ -99,6 +99,7 @@ void draw() {
       lifeX=lifeX-lifeGap;
       ratX=320;
       ratY=80;
+
       }
       //vegetable
       image(vegetable,vegetableX,vegetableY);
@@ -123,6 +124,10 @@ void draw() {
          vegetableX=floor(random(8))*80;
          vegetableY=floor(random(2,6))*80;
          lifeX=10;
+         soldierX=-80;
+        soldierY=floor(random(2,6))*80;
+         ratX=320;
+         ratY=80;
         }
         }else{
          image(over,0,0);
@@ -141,13 +146,7 @@ void draw() {
 void keyPressed(){
  if(key==CODED){
    switch(keyCode){
-     case UP:
-     ratY-=80;
-     if(ratY<80){
-     ratY=80; 
-     }
-     break;
-   
+
      case DOWN:
      ratY+=80; 
      if(ratY>400){
